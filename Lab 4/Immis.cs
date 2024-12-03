@@ -4,14 +4,14 @@ using System.Xml.Serialization;
 
 public class Immis
 {
-    //Задание 1
+    //Р—Р°РґР°РЅРёРµ 1
     public static List<T> Filler<T>(int n)
     {
         List<T> L = new List<T>();
         for (int i = 0; i < n; i++)
         {
 
-            Console.Write($"Введите {i + 1} элемент списка: ");
+            Console.Write($"Р’РІРµРґРёС‚Рµ {i + 1} СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°: ");
             string input = Console.ReadLine();
 
             try
@@ -21,7 +21,7 @@ public class Immis
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ошибка преобразования");
+                Console.WriteLine("РћС€РёР±РєР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ");
                 i--;
             }
             }
@@ -47,7 +47,7 @@ public class Immis
 
     public static void Print<T> (List<T> L)
     {
-        Console.Write("Элементы списка: ");
+        Console.Write("Р­Р»РµРјРµРЅС‚С‹ СЃРїРёСЃРєР°: ");
         for (int i = 0; i <  L.Count; i++)
         {
             Console.Write(L[i]);
@@ -55,7 +55,7 @@ public class Immis
         }
     }
 
-    //Задание 2
+    //Р—Р°РґР°РЅРёРµ 2
     public static bool Similar<T>(LinkedList<T> L)
     {
         
@@ -103,7 +103,7 @@ public class Immis
         for (int i = 0; i < n; i++)
         {
 
-            Console.Write($"Введите {i + 1} элемент списка: ");
+            Console.Write($"Р’РІРµРґРёС‚Рµ {i + 1} СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°: ");
             string input = Console.ReadLine();
 
             try
@@ -113,7 +113,7 @@ public class Immis
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ошибка преобразования");
+                Console.WriteLine("РћС€РёР±РєР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ");
                 i--;
             }
         }
@@ -123,7 +123,7 @@ public class Immis
 
     public static void PrintLL<T>(LinkedList<T> L)
     {
-        Console.Write("Элементы списка: ");
+        Console.Write("Р­Р»РµРјРµРЅС‚С‹ СЃРїРёСЃРєР°: ");
         LinkedListNode<T> current = L.First;
         while (current != null) 
         { 
@@ -134,14 +134,14 @@ public class Immis
     }
 
 
-    //Задание 3
+    //Р—Р°РґР°РЅРёРµ 3
     public static HashSet<T> CountriesToTravel<T>()
     {
-        HashSet<T> Countries = new HashSet<T> { (T)Convert.ChangeType("Франция", typeof(T)), (T)Convert.ChangeType("Германия", typeof(T)),
-         (T)Convert.ChangeType("Финляндия", typeof(T)), (T)Convert.ChangeType("США", typeof(T)),  (T)Convert.ChangeType("Италия", typeof(T)),
-          (T)Convert.ChangeType("Великобритания", typeof(T)),  (T)Convert.ChangeType("Испания", typeof(T)), (T)Convert.ChangeType("Япония", typeof(T)),};
+        HashSet<T> Countries = new HashSet<T> { (T)Convert.ChangeType("Р¤СЂР°РЅС†РёСЏ", typeof(T)), (T)Convert.ChangeType("Р“РµСЂРјР°РЅРёСЏ", typeof(T)),
+         (T)Convert.ChangeType("Р¤РёРЅР»СЏРЅРґРёСЏ", typeof(T)), (T)Convert.ChangeType("РЎРЁРђ", typeof(T)),  (T)Convert.ChangeType("РС‚Р°Р»РёСЏ", typeof(T)),
+          (T)Convert.ChangeType("Р’РµР»РёРєРѕР±СЂРёС‚Р°РЅРёСЏ", typeof(T)),  (T)Convert.ChangeType("РСЃРїР°РЅРёСЏ", typeof(T)), (T)Convert.ChangeType("РЇРїРѕРЅРёСЏ", typeof(T)),};
 
-        Console.WriteLine("Все страны: ");
+        Console.WriteLine("Р’СЃРµ СЃС‚СЂР°РЅС‹: ");
         foreach (var country_name in Countries)
         {
             Console.WriteLine(country_name);
@@ -154,28 +154,28 @@ public class Immis
         Dictionary<string, HashSet<T>> visited = new Dictionary<string, HashSet<T>>
         {
             {
-                "Херрингтон У.И.", new HashSet<T> { (T)Convert.ChangeType("Франция", typeof(T)), (T)Convert.ChangeType("Италия", typeof(T)),
-                    (T)Convert.ChangeType("США", typeof(T)), (T)Convert.ChangeType("Япония", typeof(T)) }
+                "РҐРµСЂСЂРёРЅРіС‚РѕРЅ РЈ.Р.", new HashSet<T> { (T)Convert.ChangeType("Р¤СЂР°РЅС†РёСЏ", typeof(T)), (T)Convert.ChangeType("РС‚Р°Р»РёСЏ", typeof(T)),
+                    (T)Convert.ChangeType("РЎРЁРђ", typeof(T)), (T)Convert.ChangeType("РЇРїРѕРЅРёСЏ", typeof(T)) }
             },
 
             {
-                "Зубенко М.П.", new HashSet<T> { (T)Convert.ChangeType("США", typeof(T)) }
+                "Р—СѓР±РµРЅРєРѕ Рњ.Рџ.", new HashSet<T> { (T)Convert.ChangeType("РЎРЁРђ", typeof(T)) }
             },
 
             {
-                "Гослинг Р.Р.", new HashSet<T> { (T)Convert.ChangeType("США", typeof(T)), (T)Convert.ChangeType("Италия", typeof(T)), (T)Convert.ChangeType("Финляндия", typeof(T)) }
+                "Р“РѕСЃР»РёРЅРі Р .Р .", new HashSet<T> { (T)Convert.ChangeType("РЎРЁРђ", typeof(T)), (T)Convert.ChangeType("РС‚Р°Р»РёСЏ", typeof(T)), (T)Convert.ChangeType("Р¤РёРЅР»СЏРЅРґРёСЏ", typeof(T)) }
             },
 
             {
-                "Гришин Э.Я.", new HashSet<T> { (T)Convert.ChangeType("Франция", typeof(T)), (T)Convert.ChangeType("США", typeof(T)) }
+                "Р“СЂРёС€РёРЅ Р­.РЇ.", new HashSet<T> { (T)Convert.ChangeType("Р¤СЂР°РЅС†РёСЏ", typeof(T)), (T)Convert.ChangeType("РЎРЁРђ", typeof(T)) }
             },
 
             {
-                "Гигиниешвили Г.А.", new HashSet<T> { (T)Convert.ChangeType("США", typeof(T)), (T)Convert.ChangeType("Великобритания", typeof(T)), (T)Convert.ChangeType("Италия", typeof(T)), }
+                "Р“РёРіРёРЅРёРµС€РІРёР»Рё Р“.Рђ.", new HashSet<T> { (T)Convert.ChangeType("РЎРЁРђ", typeof(T)), (T)Convert.ChangeType("Р’РµР»РёРєРѕР±СЂРёС‚Р°РЅРёСЏ", typeof(T)), (T)Convert.ChangeType("РС‚Р°Р»РёСЏ", typeof(T)), }
             }
         };
 
-        Console.WriteLine("\n Туристы и посещённые страны: ");
+        Console.WriteLine("\n РўСѓСЂРёСЃС‚С‹ Рё РїРѕСЃРµС‰С‘РЅРЅС‹Рµ СЃС‚СЂР°РЅС‹: ");
         foreach (var tourist in visited)
         {
             Console.WriteLine($"{tourist.Key}:  {string.Join(", ", tourist.Value)}");
@@ -213,20 +213,20 @@ public class Immis
         return value;
     }
 
-    //Задание 4
+    //Р—Р°РґР°РЅРёРµ 4
     public static void FillTheFile(string file)
     {
         if (!File.Exists(file)) 
         {
-            Console.WriteLine("Файл не найден!");
+            Console.WriteLine("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ!");
         }
 
-        Console.WriteLine("Запишите текст в файл: ");
+        Console.WriteLine("Р—Р°РїРёС€РёС‚Рµ С‚РµРєСЃС‚ РІ С„Р°Р№Р»: ");
         using (StreamWriter writer = new StreamWriter(File.Open(file, FileMode.Create)))
         {
             writer.WriteLine(Console.ReadLine());
         }
-        Console.WriteLine("Текст записан");
+        Console.WriteLine("РўРµРєСЃС‚ Р·Р°РїРёСЃР°РЅ");
 
     }
 
@@ -234,7 +234,7 @@ public class Immis
     {
         if (!File.Exists(file))
         {
-            Console.WriteLine("Файл не найден!");
+            Console.WriteLine("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ!");
             return new HashSet<T>();
         }
 
@@ -280,12 +280,12 @@ public class Immis
 
     public static List<Abiturients> Abiturients()
     {
-        Console.Write("Введите количество абитуриентов: ");
+        Console.Write("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р°Р±РёС‚СѓСЂРёРµРЅС‚РѕРІ: ");
         int n;
 
         while (!int.TryParse(Console.ReadLine(), out n) || n <= 0 || n > 500)
         {
-            Console.WriteLine("Некорректное значение! Введите число от 1 до 500:");
+            Console.WriteLine("РќРµРєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ! Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 500:");
         }
 
         List<Abiturients> abiturients = new List<Abiturients>();
@@ -297,14 +297,14 @@ public class Immis
 
             while (true)
             {
-                Console.WriteLine($"Введите данные {i + 1}-го абитуриента (Фамилия Имя Балл1 Балл2):");
+                Console.WriteLine($"Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ {i + 1}-РіРѕ Р°Р±РёС‚СѓСЂРёРµРЅС‚Р° (Р¤Р°РјРёР»РёСЏ РРјСЏ Р‘Р°Р»Р»1 Р‘Р°Р»Р»2):");
                 input = Console.ReadLine();
 
                 parts = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (parts.Length != 4)
                 {
-                    Console.WriteLine("Ошибка ввода. Попробуйте снова.");
+                    Console.WriteLine("РћС€РёР±РєР° РІРІРѕРґР°. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.");
                     continue;
                 }
 
@@ -317,7 +317,7 @@ public class Immis
 
                     if (surname.Length > 20 || name.Length > 15 || result1 < 0 || result1 > 100 || result2 < 0 || result2 > 100)
                     {
-                        Console.WriteLine("Данные не соответствуют требованиям. Попробуйте ещё раз");
+                        Console.WriteLine("Р”Р°РЅРЅС‹Рµ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‚ С‚СЂРµР±РѕРІР°РЅРёСЏРј. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·");
                         continue;
                     }
 
@@ -326,7 +326,7 @@ public class Immis
                 }
                 catch
                 {
-                    Console.WriteLine("Ошибка обработки данных. Попробуйте снова.");
+                    Console.WriteLine("РћС€РёР±РєР° РѕР±СЂР°Р±РѕС‚РєРё РґР°РЅРЅС‹С…. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.");
                     i--;
                 }
             }
@@ -335,7 +335,7 @@ public class Immis
             return abiturients;
     }
 
-    //Сереализация данных
+    //РЎРµСЂРµР°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…
     public static void Serializer(string file, List<Abiturients> abiturients)
     {
         XmlSerializer serializer = new XmlSerializer(typeof(List<Abiturients>));
@@ -343,16 +343,16 @@ public class Immis
         {
             serializer.Serialize(fs, abiturients);
         }
-        Console.WriteLine("\nДанные записаны в XML файл");
+        Console.WriteLine("\nР”Р°РЅРЅС‹Рµ Р·Р°РїРёСЃР°РЅС‹ РІ XML С„Р°Р№Р»");
 
     }
 
-    //Десериализация данных
+    //Р”РµСЃРµСЂРёР°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С…
     public static List<Abiturients> Deserializer (string file)
     {
         if (!File.Exists(file)) 
         {
-            Console.WriteLine("Ошибка открытия файла");
+            Console.WriteLine("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
             return new List<Abiturients> ();
         }
 
@@ -375,15 +375,15 @@ public class Immis
         }
         failed.Sort((a, b) =>
         {
-            // Сравниваем фамилии
+            // РЎСЂР°РІРЅРёРІР°РµРј С„Р°РјРёР»РёРё
             int surnameComparison = string.Compare(a.Surname, b.Surname, StringComparison.Ordinal);
 
             if (surnameComparison != 0)
             {
-                return surnameComparison; // Если фамилии разные, возвращаем результат сравнения по фамилии
+                return surnameComparison; // Р•СЃР»Рё С„Р°РјРёР»РёРё СЂР°Р·РЅС‹Рµ, РІРѕР·РІСЂР°С‰Р°РµРј СЂРµР·СѓР»СЊС‚Р°С‚ СЃСЂР°РІРЅРµРЅРёСЏ РїРѕ С„Р°РјРёР»РёРё
             }
 
-            // Если фамилии одинаковые, сравниваем по имени
+            // Р•СЃР»Рё С„Р°РјРёР»РёРё РѕРґРёРЅР°РєРѕРІС‹Рµ, СЃСЂР°РІРЅРёРІР°РµРј РїРѕ РёРјРµРЅРё
             return string.Compare(a.Name, b.Name, StringComparison.Ordinal);
         });
         return failed;
@@ -392,7 +392,7 @@ public class Immis
 
     public static void Print (List<Abiturients> abiturients)
     {
-        Console.WriteLine("\nНе допущены к экзаменам: ");
+        Console.WriteLine("\nРќРµ РґРѕРїСѓС‰РµРЅС‹ Рє СЌРєР·Р°РјРµРЅР°Рј: ");
         foreach (var abiturient in abiturients)
         {
             Console.WriteLine($"{abiturient.Surname} {abiturient.Name}");
